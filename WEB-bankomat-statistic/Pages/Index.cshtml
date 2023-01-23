@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Please sign in in system</h1>
+    <h2>@Model.Message</h2>
+    <form method="post">
+        <input type="text" name="Phone"/>
+        <input type="text" name="Password"/>
+        <input type="submit" value="Войти"/>
+    </form>
+
+   <h2>Reauest Header</h2><table>
+        @foreach (var header in Request.Headers)
+        {
+            <tr><td>@header.Key</td>@header.Key</tr>
+        }
+    </table>
+</div>
