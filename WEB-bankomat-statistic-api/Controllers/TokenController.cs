@@ -91,8 +91,8 @@ namespace WEB_bankomat_statistic_api.Controllers
         /// <param name="phone">Введите телефон пользователя</param>
         /// <param name="password">Введите пароль пользователя</param>
         /// <returns>Возвращает коллекцию по пользователю</returns>
-        private async Task<User> GetUser(object phone, string password) => await _context.Users.FirstOrDefaultAsync(p => p.Phone == phone && p.Password == password);
-        //new ConvertertClassMD5(password).CreateMD5()
+        private async Task<User> GetUser(object phone, string password) => await _context.Users.FirstOrDefaultAsync(p => p.Phone == phone && p.Password == new ConvertertClassMD5(password).CreateMD5());
+        
 
     }
 }

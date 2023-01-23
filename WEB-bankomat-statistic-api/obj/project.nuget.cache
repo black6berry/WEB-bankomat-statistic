@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9u+KDEQUaHTaCPTW7fRf9MxhsuZK6vofYplMXR7/QExchG8jl4JdHTbD676J6aeA2dwF4PMP+sOFsNEgKgPFAQ==",
+  "dgSpecHash": "H7i6HshQQrWORGp30QWkyAdmDFFMYusVZ1Z/hopgrFfSS6NRS7HHg5blYYJKt+ZTK5FK6IeHgI3Hf8uTx/NSEA==",
   "success": true,
-  "projectFilePath": "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
+  "projectFilePath": "C:\\Users\\MikeV\\Source\\Repos\\web-bankomat-statistic\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MikeV\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\MikeV\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
