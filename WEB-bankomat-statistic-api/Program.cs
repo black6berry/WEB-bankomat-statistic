@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Filters;
 using WEB_bankomat_statistic_api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,13 +24,55 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .GetBytes(builder.Configuration.GetSection("Jwt:Secret").Value))
         };
     });
+    //.AddCookie();
 
 builder.Services.AddAuthorization();
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    {
+        Description = "Standaard Authorization header using the Bearer scheme (\"bearer {tooken}\")",
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey
+    });
+
+    c.OperationFilter<SecurityRequirementsOperationFilter>();
+
+    c.SwaggerDoc("v1",
+        new OpenApiInfo
+        {
+            Title = "Bank API",
+            Description = "Platform an ASP.NET CORE 6. API Developed by Mike Vazowski. This API is still in development, minimal functionality has been implemented",
+            Version = "v1",
+            //TermsOfService = new Uri("http://t.me/black6berry"),
+            Contact = new OpenApiContact
+            {
+                Name = "Mike Vazowski",
+                Email = "mikevazoskii@yandex.com"
+            },
+            //License = new OpenApiLicense
+            //{
+            //    Name = "Employee API Bank",
+            //    Url = new Uri("http://www.apache.org/licenses/LICENSE-2.0"),
+            //}
+
+        });
+
+
+    //c.CustomOperationIds(apiDesc =>
+    //{
+    //    return apiDesc.TryGetMethodInfo(out MethodInfo methodInfo) ? methodInfo.Name : null;
+    //});
+    //// reading xml comments + turn in assembling project xml file docs
+    //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    //c.IncludeXmlComments(xmlPath);
+});
 
 var app = builder.Build();
 

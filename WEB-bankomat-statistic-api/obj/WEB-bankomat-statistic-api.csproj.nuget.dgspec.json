@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MikeV\\Source\\Repos\\web-bankomat-statistic\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj": {}
+    "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MikeV\\Source\\Repos\\web-bankomat-statistic\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj": {
+    "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MikeV\\Source\\Repos\\web-bankomat-statistic\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
+        "projectUniqueName": "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
         "projectName": "WEB-bankomat-statistic-api",
-        "projectPath": "C:\\Users\\MikeV\\Source\\Repos\\web-bankomat-statistic\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
+        "projectPath": "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
         "packagesPath": "C:\\Users\\MikeV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MikeV\\Source\\Repos\\web-bankomat-statistic\\WEB-bankomat-statistic-api\\obj\\",
+        "outputPath": "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,6 +72,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.6, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

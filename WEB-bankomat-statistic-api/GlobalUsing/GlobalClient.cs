@@ -24,4 +24,7 @@ global using Microsoft.AspNetCore.Authorization;
  */
 global using System.Reflection;
 global using System.Text;
+global using System.Security;
+global using System.Security.Cryptography;
+    
 

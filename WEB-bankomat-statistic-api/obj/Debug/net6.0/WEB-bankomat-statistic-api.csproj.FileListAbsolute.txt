@@ -190,3 +190,6 @@ C:\Users\MikeV\Source\Repos\web-bankomat-statistic\WEB-bankomat-statistic-api\ob
 C:\Users\MikeV\Source\Repos\web-bankomat-statistic\WEB-bankomat-statistic-api\obj\Debug\net6.0\WEB-bankomat-statistic-api.pdb
 C:\Users\MikeV\Source\Repos\web-bankomat-statistic\WEB-bankomat-statistic-api\obj\Debug\net6.0\WEB-bankomat-statistic-api.genruntimeconfig.cache
 C:\Users\MikeV\Source\Repos\web-bankomat-statistic\WEB-bankomat-statistic-api\obj\Debug\net6.0\ref\WEB-bankomat-statistic-api.dll
+C:\777_Mike_777\MGOK\Курсач\WEB-bankomat-statistic-api\WEB-bankomat-statistic-api\bin\Debug\net6.0\Scrutor.dll
+C:\777_Mike_777\MGOK\Курсач\WEB-bankomat-statistic-api\WEB-bankomat-statistic-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\777_Mike_777\MGOK\Курсач\WEB-bankomat-statistic-api\WEB-bankomat-statistic-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
