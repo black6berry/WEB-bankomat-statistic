@@ -8,6 +8,10 @@ namespace WEB_bankomat_statistic_api.Controllers
     [ApiController]
     public class UserController : Controller
     {
+        /// <summary>
+        /// Method with check user claim 
+        /// </summary>
+        /// <returns>return User Firstname, Patronomic, Role</returns>
         [HttpGet("claims")]
         [Authorize]
         public IActionResult Public()
@@ -16,7 +20,10 @@ namespace WEB_bankomat_statistic_api.Controllers
 
             return Ok($"Hello {currentUser.Firstname} {currentUser.Patronomic}, ваша роль {currentUser.Role}");
         }
-
+        /// <summary>
+        /// Get All Claims User
+        /// </summary>
+        /// <returns>User Claims</returns>
         private UserDTO GetCurrentUser()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;

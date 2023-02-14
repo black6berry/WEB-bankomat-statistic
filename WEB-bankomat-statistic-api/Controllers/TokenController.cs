@@ -1,15 +1,7 @@
 ﻿using BankApi.ActionClass.HelperClass.ValidateData;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using WEB_bankomat_statistic_api.ActionClass.HelperClass.Account;
-using WEB_bankomat_statistic_api.Models;
+
 
 namespace WEB_bankomat_statistic_api.Controllers
 {
@@ -25,7 +17,11 @@ namespace WEB_bankomat_statistic_api.Controllers
             _configuration = config;
             _context = context;
         }
-
+        /// <summary>
+        /// Authenticate User
+        /// </summary>
+        /// <param name="_userData"></param>
+        /// <returns>User token</returns>
         [HttpPost("auth")]
         public async Task<IActionResult> Post(AccountAuth _userData)
         {
@@ -59,7 +55,7 @@ namespace WEB_bankomat_statistic_api.Controllers
                         _configuration.GetSection("Jwt:ValidIssuer").Value,
                         _configuration.GetSection("Jwt:ValidAudience").Value,
                         claims,
-                        expires: DateTime.UtcNow.AddMinutes(1),
+                        expires: DateTime.UtcNow.AddDays(7),
                         signingCredentials: signIn);
                     string tokenUser = new JwtSecurityTokenHandler().WriteToken(token);
 

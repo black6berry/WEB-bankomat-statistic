@@ -1,9 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.Filters;
-using WEB_bankomat_statistic_api.Models;
+using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.RateLimiting;
+using DotNet.RateLimiter.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddDbContext<BankomatContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectDb")));
 
@@ -24,9 +23,22 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .GetBytes(builder.Configuration.GetSection("Jwt:Secret").Value))
         };
     });
-    //.AddCookie();
 
 builder.Services.AddAuthorization();
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
+    RateLimitPartition.GetFixedWindowLimiter(
+        partitionKey: httpContext.User.Identity?.Name ?? httpContext.Request.Headers.Host.ToString(),
+        factory: partition => new FixedWindowRateLimiterOptions
+        {
+            AutoReplenishment = true,
+            PermitLimit = 10,
+            QueueLimit = 0,
+            Window = TimeSpan.FromMinutes(1)
+        }));
+});
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -74,6 +86,8 @@ builder.Services.AddSwaggerGen(c =>
     //c.IncludeXmlComments(xmlPath);
 });
 
+//builder.Services.AddCors();
+
 var app = builder.Build();
 
 //Configure the HTTP request pipeline.
@@ -85,8 +99,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+//app.UseCors(builder => builder.WithOrigins("https://localhost:7003/"));
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseRateLimiter();
 
 app.MapControllers();
 

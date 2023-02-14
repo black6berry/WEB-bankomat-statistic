@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X6D2yRrYrDgUoSghXM7uyiak+hvIIHsLLIoXEfrTW+Ndt6W7JNpQEv0KPzzHFPhmfaVV/0pcc1LpHeXUpGG3Fg==",
+  "dgSpecHash": "pYCrAt22Q3DxzXwqBg+C8Z9tnF1scraMKu/e61oCl9GMHc1zeF3GytsKMt1e266HDtz4E29V6QLEIOdfGrByZg==",
   "success": true,
   "projectFilePath": "C:\\777_Mike_777\\MGOK\\Курсач\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api\\WEB-bankomat-statistic-api.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\MikeV\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\MikeV\\.nuget\\packages\\microsoft.openapi\\1.3.1\\microsoft.openapi.1.3.1.nupkg.sha512",
     "C:\\Users\\MikeV\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\MikeV\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\MikeV\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\MikeV\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\MikeV\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",

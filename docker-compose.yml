@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bankomat-api-backend:
+    image: ${DOCKER_REGISTRY-}bankomat-api
+    build:  
+      context: .
+      dockerfile: WEB-bankomat-statistic-api/Dockerfile
